@@ -1,0 +1,49 @@
+﻿@model OnlineTest.Models.Question
+@{
+    ViewBag.Title = "StartTest";
+}
+
+<h2>StartTest</h2>
+
+@using (Html.BeginForm())
+{
+
+   @Html.AntiForgeryToken()
+   @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Question</legend>
+      
+        <div class="editor-label">
+            @Html.DisplayFor(model => model.Description)
+        </div>
+
+        <div class="editor-label">
+            <input id="option1" name="a" type="checkbox" value="@Model.Option1" />
+            @Html.DisplayFor(model => model.Option1)
+        </div>
+
+        <div class="editor-label">
+            <input id="option2" name="b" type="checkbox" value="@Model.Option2" />
+            @Html.DisplayFor(model => model.Option2)
+        </div>
+
+        <div class="editor-label">
+            <input id="option3" name="c" type="checkbox" value="@Model.Option3" />
+            @Html.DisplayFor(model => model.Option3)
+        </div>
+
+        <div class="editor-label">
+            <input id="option4" name="d" type="checkbox" value="@Model.Option4" />
+            @Html.DisplayFor(model => model.Option4)
+        </div>
+        <p>
+            <input type="submit" value="Submit" />
+        </p>
+         </fieldset>
+}
+
+<div>
+        @Html.ActionLink("Next", "StartTest")
+    </div>
+
+

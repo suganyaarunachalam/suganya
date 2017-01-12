@@ -1,0 +1,64 @@
+﻿@model OnlineTest.Models.Question
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Question</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.No)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.No)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Option1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Option1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Option2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Option2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Option3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Option3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Option4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Option4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Answer)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Answer)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
